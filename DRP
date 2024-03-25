@@ -1,0 +1,99 @@
+<!-- Custom JavaScript code -->
+    <script>
+        // This JavaScript code is executed when the DOM content is fully loaded.
+        document.addEventListener('DOMContentLoaded', function() {
+            // Select all elements with the class '.jet-checkboxes-list__label'.
+            var labels = document.querySelectorAll('.jet-checkboxes-list__label');
+            // For each selected element...
+            labels.forEach(function(label) {
+                // Retrieve the text content.
+                var labelText = label.textContent;
+                // Wrap the text content inside an <h2> element and replace the original content.
+                label.innerHTML = '<h2>' + labelText + '</h2>';
+            });
+        });
+    </script>
+
+    <!-- Custom CSS styles -->
+    <style>
+        /* Styles for checkboxes labels */
+        .jet-checkboxes-list__label h2 {
+            font-family: "Montserrat", Sans-serif; /* Set font family */
+            font-size: 12px; /* Set font size */
+            font-weight: bold; /* Set font weight */
+            padding: 0 !important; /* Remove padding */
+            margin: 0 !important; /* Remove margin */
+        }
+
+        /* Styles for the entire document */
+        html, body {
+            max-width: 100%; /* Set maximum width */
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+
+        /* Media query for screens wider than 961 pixels */
+        @media (min-width: 961px) {
+            /* Styles for the '.xoo-wsc-container' element */
+            .xoo-wsc-container {
+                position: fixed !important; /* Set position to fixed */
+                background-color: #fff !important; /* Set background color */
+                height: 400px; /* Set height */
+                z-index: 999999 !important; /* Set z-index */
+                transition: opacity 0.5s, visibility 0s 0.5s !important; /* Set transition */
+                transform: translate(-34%, 10%) !important; /* Set transformation */
+                margin: 5% !important; /* Set margin */
+                text-align: center; /* Set text alignment */
+                max-width: none; /* Remove maximum width */
+                width: 55%; /* Set width */
+                display: flex !important; /* Set display to flex */
+                flex-direction: column !important; /* Set flex direction to column */
+                align-items: center !important; /* Set align items to center */
+                border-radius: 10px !important; /* Set border radius */
+                box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2) !important; /* Set box shadow */
+                opacity: 0 !important; /* Set opacity */
+                visibility: hidden !important; /* Set visibility */
+            }
+
+            /* Styles for the '.xoo-wsc-cart-active' class */
+            .xoo-wsc-cart-active .xoo-wsc-container {
+                opacity: 1 !important; /* Set opacity */
+                visibility: visible !important; /* Set visibility */
+                transition: opacity 0.5s !important; /* Set transition */
+            }
+
+            /* Styles for the '.xoo-wsc-header' element */
+            .xoo-wsc-header {
+                background-color: #D4AB7B !important; /* Set background color */
+                color: #fff !important; /* Set text color */
+                padding: 5px 0; /* Set padding */
+                text-align: center !important; /* Set text alignment */
+                width: 100%; /* Set width */
+            }
+
+            /* Styles for the '.xoo-wsc-footer' element */
+            .xoo-wsc-footer {
+                flex-shrink: 0 !important; /* Set flex shrink */
+                display: flex !important; /* Set display to flex */
+                justify-content: space-between !important; /* Set justify content to space-between */
+                align-items: center !important; /* Set align items to center */
+                width: 100% !important; /* Set width */
+                border-top: 1px solid #eee !important; /* Set border top */
+                flex-direction: row-reverse !important; /* Set flex direction to row-reverse */
+                padding: 1% 5%; /* Set padding */
+            }
+
+            /* Styles for the '.xoo-wsc-footer > *' elements */
+            .xoo-wsc-footer > * {
+                flex-grow: 1 !important; /* Set flex grow */
+            }
+
+            /* Styles for the '.xoo-wsc-body' element */
+            .xoo-wsc-body {
+                width: 100%; /* Set width */
+                padding: 0 5% 0 0; /* Set padding */
+            }
+
+            /* Styles for the '.xoo-wsc-sum-col' element */
+            .xoo-wsc-sum-col {
+                flex-grow: 1; /* Set flex grow */
+                padding-left: 15px; /*
